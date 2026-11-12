@@ -1,0 +1,155 @@
+{
+  "glossary": {
+    "柏木": "Kashiwagi",
+    "千鶴": "Chizuru",
+    "耕一": "Koichi"
+  },
+  "samples": [
+    {
+      "id": "MAX2_SCN/000.SCN/text/001",
+      "context_ids": [],
+      "voice_note": "First-person narration. Keep the dream's identity and meaning uncertain."
+    },
+    {
+      "id": "MAX2_SCN/001.SCN/text/000",
+      "context_ids": [],
+      "voice_note": "The first-person narrator has just awakened from a disturbing dream."
+    },
+    {
+      "id": "MAX2_SCN/001.SCN/text/001",
+      "context_ids": [
+        "MAX2_SCN/001.SCN/text/000"
+      ],
+      "voice_note": "Describe only what the narrator can see at this point."
+    },
+    {
+      "id": "MAX2_SCN/001.SCN/text/002",
+      "context_ids": [
+        "MAX2_SCN/001.SCN/text/000",
+        "MAX2_SCN/001.SCN/text/001"
+      ],
+      "voice_note": "Keep his momentary uncertainty about whether he is still dreaming."
+    },
+    {
+      "id": "MAX2_SCN/001.SCN/text/003",
+      "context_ids": [
+        "MAX2_SCN/001.SCN/text/002"
+      ],
+      "voice_note": "First-person narration; the morning contrasts with the dream."
+    },
+    {
+      "id": "MAX2_SCN/001.SCN/text/004",
+      "context_ids": [
+        "MAX2_SCN/001.SCN/text/001",
+        "MAX2_SCN/001.SCN/text/003"
+      ],
+      "voice_note": "The woman speaks politely. The narrator is embarrassed and still groggy."
+    },
+    {
+      "id": "MAX2_SCN/001.SCN/text/005",
+      "context_ids": [
+        "MAX2_SCN/001.SCN/text/004"
+      ],
+      "voice_note": "First-person narrator introduces a relative in a conversational tone."
+    },
+    {
+      "id": "MAX2_SCN/001.SCN/text/006",
+      "context_ids": [
+        "MAX2_SCN/001.SCN/text/004",
+        "MAX2_SCN/001.SCN/text/005"
+      ]
+    },
+    {
+      "id": "MAX2_SCN/001.SCN/text/007",
+      "context_ids": [
+        "MAX2_SCN/001.SCN/text/005",
+        "MAX2_SCN/001.SCN/text/006"
+      ]
+    },
+    {
+      "id": "MAX2_SCN/001.SCN/text/008",
+      "context_ids": [
+        "MAX2_SCN/001.SCN/text/006",
+        "MAX2_SCN/001.SCN/text/007"
+      ]
+    },
+    {
+      "id": "MAX2_SCN/001.SCN/text/009",
+      "context_ids": [
+        "MAX2_SCN/001.SCN/text/007",
+        "MAX2_SCN/001.SCN/text/008"
+      ]
+    },
+    {
+      "id": "MAX2_SCN/001.SCN/text/010",
+      "context_ids": [
+        "MAX2_SCN/001.SCN/text/008",
+        "MAX2_SCN/001.SCN/text/009"
+      ]
+    },
+    {
+      "id": "MAX2_SCN/001.SCN/text/011",
+      "context_ids": [
+        "MAX2_SCN/001.SCN/text/009",
+        "MAX2_SCN/001.SCN/text/010"
+      ]
+    },
+    {
+      "id": "MAX2_SCN/001.SCN/text/012",
+      "context_ids": [
+        "MAX2_SCN/001.SCN/text/010",
+        "MAX2_SCN/001.SCN/text/011"
+      ]
+    },
+    {
+      "id": "MAX2_SCN/001.SCN/text/013",
+      "context_ids": [
+        "MAX2_SCN/001.SCN/text/012"
+      ],
+      "voice_note": "Chizuru speaks politely; the narrator's observations are more casual."
+    },
+    {
+      "id": "MAX2_SCN/001.SCN/text/014",
+      "context_ids": [
+        "MAX2_SCN/001.SCN/text/012",
+        "MAX2_SCN/001.SCN/text/013"
+      ]
+    },
+    {
+      "id": "MAX2_SCN/001.SCN/text/015",
+      "context_ids": [
+        "MAX2_SCN/001.SCN/text/013",
+        "MAX2_SCN/001.SCN/text/014"
+      ]
+    },
+    {
+      "id": "MAX2_SCN/001.SCN/text/016",
+      "context_ids": [
+        "MAX2_SCN/001.SCN/text/013",
+        "MAX2_SCN/001.SCN/text/014",
+        "MAX2_SCN/001.SCN/text/015"
+      ],
+      "strip_choice_number": true
+    },
+    {
+      "id": "MAX2_SCN/001.SCN/text/017",
+      "context_ids": [
+        "MAX2_SCN/001.SCN/text/013",
+        "MAX2_SCN/001.SCN/text/014",
+        "MAX2_SCN/001.SCN/text/015"
+      ],
+      "voice_note": "A player choice phrased as the narrator's joking answer. Do not add later plot knowledge.",
+      "join_wrapped": true,
+      "strip_choice_number": true
+    },
+    {
+      "id": "MAX2_SCN/001.SCN/text/018",
+      "context_ids": [
+        "MAX2_SCN/001.SCN/text/013",
+        "MAX2_SCN/001.SCN/text/014",
+        "MAX2_SCN/001.SCN/text/015"
+      ],
+      "strip_choice_number": true
+    }
+  ]
+}

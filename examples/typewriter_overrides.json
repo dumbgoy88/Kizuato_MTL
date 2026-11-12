@@ -1,0 +1,74 @@
+[
+  {
+    "id": "MAX2_SCN/106.SCN/text/012",
+    "source_sha256": "3162663bcbba92a6e254b6da66fca42c8a22b92eb11985f2cc9955ea95624514",
+    "format": "paginated",
+    "text_runs": [
+      "…A",
+      "ND",
+      " T",
+      "HE",
+      " D",
+      "OO",
+      "R ",
+      "OP",
+      "EN",
+      "E",
+      "D",
+      "."
+    ]
+  },
+  {
+    "id": "MAX2_SCN/158.SCN/text/027",
+    "source_sha256": "54b18e193755a2af4e9960cf6b57a2b8006928f332243b1bb1cdc4fb461a0bf3",
+    "format": "paginated",
+    "text_runs": [
+      "RUMBL",
+      "E RU",
+      "MBLE",
+      " RUM",
+      "BLE ",
+      "RUM\nB",
+      "LE R",
+      "UMBL",
+      "E RU",
+      "MBLE",
+      " RUMBLE\n RUMBLE RUMBLE…………………!"
+    ]
+  },
+  {
+    "id": "MAX2_SCN/159.SCN/text/012",
+    "source_sha256": "327fa3fa59aa9fc7efee0b4850aad59c477738073617ef312cf10a9c396c8e8c",
+    "format": "paginated",
+    "text_runs": [
+      "…IT",
+      " AR",
+      "RI",
+      "VE",
+      "D."
+    ]
+  },
+  {
+    "id": "MAX2_SCN/164.SCN/text/048",
+    "source_sha256": "789cf36ba4155fed7d31f22d5a29faf3dd12f64b0c69bc4af0a4b1581d579157",
+    "format": "paginated",
+    "text_runs": [
+      "…I ",
+      "WEP",
+      "T A",
+      "T T",
+      "HE ",
+      "DEA",
+      "TH ",
+      "OF ",
+      "\nMY",
+      " A",
+      "LI",
+      "EN",
+      " F",
+      "RI",
+      "EN",
+      "D."
+    ]
+  }
+]

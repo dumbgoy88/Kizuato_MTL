@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Kizuato PC-98 English Patch — Project Overview</title>
+  <style>
+    @page { size: A4; margin: 12mm; }
+    body { font: 10pt/1.25 sans-serif; color: #202020; max-width: 760px; }
+    h1 { font-size: 18pt; margin: 0 0 3pt; }
+    h2 { font-size: 11pt; margin: 9pt 0 3pt; }
+    p { margin: 0 0 5pt; }
+    ul { margin: 3pt 0 6pt; padding-left: 18pt; }
+    li { margin: 0 0 3pt; }
+    .sub { color: #555; margin-bottom: 10pt; }
+    .note { border-left: 3pt solid #555; padding-left: 9pt; }
+    footer { margin-top: 10pt; font-size: 8pt; color: #666; }
+  </style>
+</head>
+<body>
+  <h1>Kizuato PC-98 English Patch</h1>
+  <p class="sub">Project overview · 10 November 2026</p>
+
+  <h2>Goal</h2>
+  <p>Create an English translation patch for Leaf’s original PC-98 Kizuato while preserving its original graphics, FM music, effects, choices, timing, and gameplay. The intended release is a patch or reproducible transformation for someone who owns the game, not a complete game image.</p>
+
+  <h2>What has been done</h2>
+  <ul>
+    <li>Inspected the supplied game files. Identified Kizuato’s packed scene archive and verified that extracting and rebuilding it without changes reproduces the original bytes.</li>
+    <li>Built tools to extract Japanese messages with stable IDs, keep story commands separate from translation, call a local PLaMo model, cache results, check text and branch structure, and insert drafts into a copy of the game.</li>
+    <li>Completed a first local draft pass for all 3,306 translatable messages. A disposable beta image contains 3,154 English drafts; the remaining messages stay Japanese when the current encoding or layout checks cannot safely fit them.</li>
+    <li>Prepared and started a second pass with verified cross-scene context, selected-choice history, a glossary, and stage-gated PC-98 character and clue notes. It runs locally and can be watched, stopped, and resumed without discarding completed work.</li>
+  </ul>
+
+  <h2>Current limits and next steps</h2>
+  <p class="note">The English is still draft text. Choice layout, page continuation, effects, and branch behavior need emulator checks before the patch can be called working. Some bonus-scene context remains uncertain, and the original text renderer may need further work to fit every English passage without cutting words.</p>
+  <p>After the second pass, review translation accuracy and character voice, resolve conflicting drafts, rebuild a fresh test copy, and test the opening choice and later routes in a PC-98 emulator. No original game image is modified, and no game assets or model weights are committed to the project repository.</p>
+
+  <footer>Source project: local Git repository · This overview contains no game assets or script text.</footer>
+</body>
+</html>

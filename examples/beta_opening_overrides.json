@@ -1,0 +1,44 @@
+[
+  {
+    "id": "MAX2_SCN/000.SCN/text/021",
+    "source_sha256": "ddf4aecd4ad8d75017461fae2c499b472fea171a1fb14812d264219ba0e1319c",
+    "text_runs": [
+      "MOOORNING!",
+      "MOOORNING!",
+      "MORNING!",
+      "MORNING!",
+      "MORNING!",
+      "MORNING!",
+      "MORNING!",
+      "MORNING!",
+      "\nMORNING!",
+      "MORNING!",
+      "MORNING!",
+      "\nMORNING!",
+      "MORNING!",
+      "MORNING!",
+      "MORNING!",
+      "MORNING!",
+      "\nMORNING!",
+      "MORNING!",
+      "MORNING!",
+      "\nMORNING!",
+      "MORNING!!"
+    ],
+    "format": "paginated"
+  },
+  {
+    "id": "MAX2_SCN/000.SCN/text/024",
+    "source_sha256": "0ca9ae8427662287079e8815ae0b2a102515ab9d5b9f9d379bed995ba2ba9a0e",
+    "text_runs": [
+      "\u300cIS IT MORNING YET?!\u300d"
+    ]
+  },
+  {
+    "id": "MAX2_SCN/000.SCN/text/025",
+    "source_sha256": "ef56e0e4a6a903da139b7836e656baef60220004587b286b6467f8d28e79cf8e",
+    "text_runs": [
+      "1. KEEP DREAMING."
+    ]
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "facts": [
+    {
+      "id": "chizuru_relationship_opening",
+      "source": "P98 001.SCN/text/005",
+      "confidence": "high",
+      "available_after": "MAX2_SCN/001.SCN/text/005",
+      "note": "Chizuru Kashiwagi is Koichi's older cousin and the Kashiwagi household head. Keep her polite voice and Koichi's first-person viewpoint.",
+      "enabled": true
+    },
+    {
+      "id": "w96_route_order",
+      "source": "W96 1996 walkthrough",
+      "confidence": "guide-only",
+      "available_after": null,
+      "note": "The guide organizes a completion path through Chizuru, Azusa, Kaede, Yanagawa, and Hatsune.",
+      "enabled": false
+    }
+  ]
+}

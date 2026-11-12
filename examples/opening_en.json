@@ -1,0 +1,47 @@
+[
+  {
+    "id": "MAX2_SCN/000.SCN/text/001",
+    "source_sha256": "9c7900edca830097020fbdcde8271e2bb4223882521dedd58b7c1a33857ef21f",
+    "text_runs": ["I DREAM OF A DARK ROOM.", "I HUG MYSELF AND SHAKE."]
+  },
+  {
+    "id": "MAX2_SCN/000.SCN/text/023",
+    "source_sha256": "c8876c174feebd94acce7a4cd01dfa48c6c576014ad1f615e5d1f58a0fb9d5f8",
+    "text_runs": ["「IS IT MORNING YET?!」"]
+  },
+  {
+    "id": "MAX2_SCN/000.SCN/text/024",
+    "source_sha256": "0ca9ae8427662287079e8815ae0b2a102515ab9d5b9f9d379bed995ba2ba9a0e",
+    "text_runs": ["「IS IT MORNING YET?!」"]
+  },
+  {
+    "id": "MAX2_SCN/000.SCN/text/025",
+    "source_sha256": "ef56e0e4a6a903da139b7836e656baef60220004587b286b6467f8d28e79cf8e",
+    "text_runs": ["1. KEEP DREAMING."]
+  },
+  {
+    "id": "MAX2_SCN/000.SCN/text/026",
+    "source_sha256": "5fbc5752ffa3c14ed216f47bb888937f82d821077aff0e89d9b7296ee3f3f3c9",
+    "text_runs": ["2. WAKE UP."]
+  },
+  {
+    "id": "MAX2_SCN/001.SCN/text/015",
+    "source_sha256": "d2a0be4eb9e0d05b25a94caf3b0544139382eeb3f4aea0906aa864e32fb3f081",
+    "text_runs": ["I HAVE NO CHOICE..."]
+  },
+  {
+    "id": "MAX2_SCN/001.SCN/text/016",
+    "source_sha256": "edac5c3df7451d8884701430aa7198e5beba8848f4e230948ed9f23ca516c20c",
+    "text_runs": ["1. TELL MY DREAM."]
+  },
+  {
+    "id": "MAX2_SCN/001.SCN/text/017",
+    "source_sha256": "c31c57ba25a0756ab57cc654dd7bd3321bc7702020c59da3948025661eddc208",
+    "text_runs": ["2. JOKE THAT CHIZURU", "WAS IN MY DREAM."]
+  },
+  {
+    "id": "MAX2_SCN/001.SCN/text/018",
+    "source_sha256": "98968112e9f449570181af73609233776f179882be8bd1e0692c2b55ae71764d",
+    "text_runs": ["3. LAUGH IT OFF."]
+  }
+]

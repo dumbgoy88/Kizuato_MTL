@@ -1,0 +1,92 @@
+{
+  "facts": [
+    {
+      "id": "chizuru_relationship_opening",
+      "source": "P98 001.SCN/text/005",
+      "confidence": "high",
+      "available_after": "MAX2_SCN/001.SCN/text/005",
+      "trigger_terms": ["千鶴", "柏木"],
+      "release_from_verified_prior": true,
+      "note": "Chizuru Kashiwagi is Koichi's older cousin and the Kashiwagi household head. Her opening speech is polite; keep Koichi's first-person viewpoint where the Japanese uses it.",
+      "enabled": true
+    },
+    {
+      "id": "azusa_intro",
+      "source": "P98 006.SCN/text/007",
+      "confidence": "high",
+      "available_after": "MAX2_SCN/006.SCN/text/007",
+      "trigger_terms": ["梓"],
+      "release_from_verified_prior": true,
+      "note": "Azusa is Chizuru's younger sister, the Kashiwagi family's second daughter. Koichi initially describes her manner of speaking as rough; do not soften or intensify dialogue beyond the Japanese.",
+      "enabled": true
+    },
+    {
+      "id": "hatsune_intro",
+      "source": "P98 010.SCN/text/002",
+      "confidence": "high",
+      "available_after": "MAX2_SCN/010.SCN/text/002",
+      "trigger_terms": ["初音"],
+      "release_from_verified_prior": true,
+      "note": "Hatsune is the youngest Kashiwagi sister. Her opening greeting addresses Koichi as an older brother; retain the relationship without adding intimacy or later knowledge.",
+      "enabled": true
+    },
+    {
+      "id": "kaede_intro",
+      "source": "P98 016.SCN/text/006",
+      "confidence": "high",
+      "available_after": "MAX2_SCN/016.SCN/text/006",
+      "trigger_terms": ["楓"],
+      "release_from_verified_prior": true,
+      "note": "Kaede is the third Kashiwagi sister. Koichi sees her as quiet and reserved and wonders whether she dislikes him; that is his impression, not a confirmed motive.",
+      "enabled": true
+    },
+    {
+      "id": "yanagawa_intro",
+      "source": "P98 035.SCN/text/000",
+      "confidence": "high",
+      "available_after": "MAX2_SCN/035.SCN/text/000",
+      "trigger_terms": ["柳川", "長瀬"],
+      "release_from_verified_prior": true,
+      "note": "Yanagawa identifies himself as a police officer alongside Nagase. Do not imply later route-specific motives at this point.",
+      "enabled": true
+    },
+    {
+      "id": "tsurugiya_intro",
+      "source": "P98 034.SCN/text/013",
+      "confidence": "high",
+      "available_after": "MAX2_SCN/034.SCN/text/013",
+      "trigger_terms": ["鶴来屋"],
+      "release_from_verified_prior": true,
+      "note": "Tsurugiya is the lodging-centered business group chaired by Chizuru. Keep the business name consistent; the romanization remains provisional.",
+      "enabled": true
+    },
+    {
+      "id": "narrator_hiding_place_suspicion",
+      "source": "P98 059.SCN/text/019",
+      "confidence": "high for narrator's words, not objective truth",
+      "available_after": "MAX2_SCN/059.SCN/text/019",
+      "trigger_terms": ["夢", "殺人鬼", "怪物"],
+      "release_from_verified_prior": true,
+      "note": "Koichi has wondered whether the killer or monster could hide inside his own mind. This is his suspicion, not an established revelation; preserve uncertainty in later references to the dream.",
+      "enabled": true
+    },
+    {
+      "id": "takayuki_phone_clue",
+      "source": "P98 091.SCN/text/042",
+      "confidence": "high",
+      "available_after": "MAX2_SCN/091.SCN/text/042",
+      "trigger_terms": ["たかゆき", "コンビニ"],
+      "release_from_verified_prior": true,
+      "note": "A remembered phone message names Takayuki and mentions his convenience-store work. His identity is not established by that message; keep later references to this clue tentative until the source resolves it.",
+      "enabled": true
+    },
+    {
+      "id": "w96_route_order",
+      "source": "W96 1996 walkthrough",
+      "confidence": "guide-only",
+      "available_after": null,
+      "note": "The guide organizes a completion path through Chizuru, Azusa, Kaede, Yanagawa, and Hatsune.",
+      "enabled": false
+    }
+  ]
+}
