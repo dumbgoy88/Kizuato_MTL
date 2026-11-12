@@ -1,5 +1,10 @@
 # Status — public snapshot, 2026-11-11
 
+## User playtest note
+
+- GitHub README commit `47946bd` records the user's report that text fit and translation quality seemed good after roughly five minutes of play past the first choice. This is a user observation, not independent full-route verification.
+- The public source branch was rebased onto two remote README edits after a non-fast-forward push rejection. The README now gives installation instructions; this note preserves the user observation. No force push or remote write was performed.
+
 ## Verified
 
 - The supplied PC-98 Kizuato scene archive extracts and rebuilds byte-identically when unchanged. The source HDI and scene PAK are SHA-256 pinned in the tools.
