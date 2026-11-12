@@ -14,7 +14,7 @@ Requires Python 3, Git, `mtools` (`mdir`, `mcopy`), and a PC-98 emulator for vis
 
 ## Share the v6 beta installer
 
-The separately distributed beta installer ZIP contains English edit instructions and project-authored tools, with no game image or rebuilt game archive. Give testers the ZIP and the included `README.txt`. Each tester supplies their own **clean** Kizuato HDI with SHA-256 `783adfa48bf5b8efcb9ae681e726f3c6180e8cac2d2bc568a5953aa32b992d04` and runs `install.py` with Python 3.10 or newer. The installer needs no third-party Python packages or `mtools`; it writes a new HDI and leaves the source alone. It refuses other source revisions and existing output files.
+The separately distributed beta installer ZIP contains English edit instructions and project-authored tools, with no game image or rebuilt game archive. Use the ZIP and the included `README.txt`. Each tester supplies their own **clean** Kizuato HDI with SHA-256 `783adfa48bf5b8efcb9ae681e726f3c6180e8cac2d2bc568a5953aa32b992d04` and runs `install.py` with Python 3.10 or newer. The installer needs no third-party Python packages or `mtools`; it writes a new HDI and leaves the source alone. It refuses other source revisions and existing output files.
 
 To regenerate the ignored ZIP from the verified v6 edit set, run `python tools/build_beta_package.py`. The builder refuses to overwrite an existing package. The exact package and end-to-end installer test are recorded in [STATUS.md](STATUS.md). Share the ZIP, never an installed HDI.
 
