@@ -1,8 +1,10 @@
-# Kizuato PC-98 English patch research
+# Kizuato PC-98 English patch MTL
 
 Local, reproducible project for an AI-assisted English patch of Leaf's original PC-98 Kizuato. The first target is one translated passage and choice in an emulator, while keeping the original graphics, FM music, effects, and gameplay.
 
 **Current state:** extraction and unchanged rebuild are verified. The ignored v6 diagnostic HDI uses real continuation messages; static audits find no Japanese-letter messages and all 47 choice groups within the measured layout. A preliminary native opening check looked good, while full-route behavior remains unverified. See [all-English test instructions](docs/all_english_demo.md), [review findings](docs/review_findings.md), and [STATUS.md](STATUS.md).
+
+# Text fits, and translation quality seems good! Tested past the first choice for about 5 minutes so far.
 
 A brief shareable overview is available as source-controlled [HTML](docs/project_overview.html) and an ignored one-page PDF at `build/Kizuato-PC98-English-Patch-Overview.pdf`.
 
