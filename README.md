@@ -1,6 +1,8 @@
 # Kizuato PC-98 English v6 beta
 
 This beta adds an AI-assisted English script to Leaf's original PC-98 Kizuato. You need your own clean game HDI. The installer ZIP contains no game image.
+<img width="3840" height="2160" alt="image" src="https://github.com/user-attachments/assets/ffefba6b-890a-4e2b-9fb7-938b3b9db1d2" />
+
 
 ## Install
 
