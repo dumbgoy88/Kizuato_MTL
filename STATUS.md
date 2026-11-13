@@ -17,5 +17,4 @@ The published download linked from `README.md` is still **v6 beta**. A player re
 - `201.SCN` loads in a direct jump but has twelve dynamically referenced bonus messages and page behavior that still need route-specific checks. It is an explicit exception to the 16,000-byte main-story text budget.
 - Next: test the unshortened route approach to the first sharded choice, audit the bonus-scene dynamic messages, then run guarded route and save/load checks with audio and effects observation. Publish a new installer only after reviewing those results. The source build commands are in `docs/development_workflow.md`; diagnostic method and limits are in `docs/test_strategy.md`.
 
-No game images, rebuilt archives, model weights, screenshots, or private research notes are tracked here.
-An image embed from an earlier remote README edit was removed from the current README during this source update. The earlier Git commit and its hosted attachment still exist in remote history; this update does not rewrite or delete them.
+No game images, rebuilt archives, model weights, screenshots, or private research notes are tracked here. The README retains the user's existing externally hosted screenshot link; the image file is not tracked by Git.
