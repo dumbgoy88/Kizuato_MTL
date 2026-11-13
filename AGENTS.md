@@ -5,10 +5,10 @@ Read `STATUS.md` before changing code or making claims. Keep verified observatio
 ## Preservation
 
 - Treat supplied Kizuato images and private reference material as read-only references. Work only in ignored `work/`, `build/`, or other copies.
-- Do not commit game images, extracted game data, patched executables, screenshots containing game art, translation model weights, credentials, or save files. Check `git status` and `git check-ignore` before each commit.
+- Do not commit game images, raw extracted game data, patched executables, screenshots containing game art, translation model weights, credentials, or save files. The user-requested text-only Japanese message export at `translations/japanese_source.jsonl` is the sole exception; it must contain no raw bytes or commands. Check `git status` and `git check-ignore` before each commit.
 - Preserve original PC-98 graphics, FM music, effects, choices, timing, and branch behavior. Every engine or script change needs a reason and a regression check.
 - Record SHA-256 hashes for input images and important extracted files. Refuse to patch an unexpected input revision.
-- Distribute a patch or reproducible transformation, never a complete game image or copyrighted payload.
+- Distribute a patch or reproducible transformation, never a complete game image or binary copyrighted payload. Keep the Japanese text export separate from installer payloads.
 
 ## Engineering
 

@@ -23,7 +23,7 @@ A v7 installer candidate now rebuilds the English scenes with lossless compressi
 
 ## English script
 
-The [full English edit set](translations/english_edits.json) is available here as readable JSON, with stable message IDs and source hashes. It is the text used by the v7 candidate and contains no original Japanese script or game assets. [Format and coverage notes](translations/README.md) explain the remaining unchanged neutral messages.
+The [full English edit set](translations/english_edits.json) and [decoded Japanese script](translations/japanese_source.jsonl) are here, aligned by stable message IDs and source hashes. The Japanese file contains text only; no game image or engine commands are included. [Format and coverage notes](translations/README.md) explain the remaining unchanged neutral messages.
 
 ## Report problems
 
