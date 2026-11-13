@@ -78,7 +78,7 @@ The existing older llama.cpp executable does not understand this model's tokeniz
 
 Run `bash tools/rebuild_split_demo.sh <unused-name>` to rebuild the full English local test HDI from ignored source and draft files. It audits pagination, compresses rebuilt scenes with LZS2, splits main-story text blocks to at most 16,000 decoded bytes, and verifies the installed PAK on a new HDI copy. It never overwrites an existing output. Review `build/<name>-split-audit.json` and `build/<name>-shard-report.json`; bonus scene `201.SCN` remains an explicit exception.
 
-`python tools/build_beta_package.py` creates the ignored `build/Kizuato-English-v7-beta-candidate.zip` from the pinned edit set and checked PAK. The builder refuses to replace an existing ZIP. Its packaged `install.py` was run end to end on the pinned clean HDI; see `STATUS.md` for hashes and native checks. To verify another clean install, extract the ZIP and run its `install.py` with `--output` set to an unused path under `build/`.
+`python tools/build_beta_package.py` creates the ignored `build/Kizuato-English-v7-beta-candidate.zip` from the tracked [English edit set](../translations/english_edits.json) and pinned installer code. It does not need a game archive to package the patch and refuses to replace an existing ZIP. Its packaged `install.py` rebuilds the verified PAK from each tester's clean HDI; see `STATUS.md` for hashes and native checks. To verify another clean install, extract the ZIP and run its `install.py` with `--output` set to an unused path under `build/`.
 
 The public README still links the older v6 beta. Do not publish the v7 candidate, extracted game files, or a patched HDI until the outstanding route checks in `STATUS.md` are reviewed.
 

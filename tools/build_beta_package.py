@@ -5,6 +5,7 @@ from __future__ import annotations
 import gzip
 import hashlib
 import json
+import re
 import shutil
 import zipfile
 from pathlib import Path
@@ -12,9 +13,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 BUILD = ROOT / "build"
 NAME = "Kizuato-English-v7-beta-candidate"
-EDITS = BUILD / "all-english-diagnostic-20261111-v6-unsafe-intermediate-edits.json"
+EDITS = ROOT / "translations/english_edits.json"
 EXPECTED_EDITS = "a1e846b6d25d4fc0d12ac2a5918a5d2451bd6d3b3269936be1ea2efb7d34a26b"
-FINAL_PAK = BUILD / "v7-sharded-builder-check.PAK"
 EXPECTED_PAK = "a9c35adf6e96d156405a937f7a0635a8bd8ba54075791792198170931cacc05b"
 SOURCES = {
     "install.py": ROOT / "tools/beta_install.py",
@@ -40,13 +40,22 @@ def main() -> None:
     if package_dir.exists() or archive_path.exists():
         raise ValueError("beta package exists; choose a new version before rebuilding")
     edit_bytes = EDITS.read_bytes()
-    if digest(edit_bytes) != EXPECTED_EDITS or digest(FINAL_PAK.read_bytes()) != EXPECTED_PAK:
-        raise ValueError("v7 edit instructions or verified PAK changed")
+    if digest(edit_bytes) != EXPECTED_EDITS:
+        raise ValueError("v7 English edit set differs from verified build")
     edits = json.loads(edit_bytes)
     if len(edits) != 3264 or len({row["id"] for row in edits}) != 3264:
         raise ValueError("unexpected beta edit IDs")
     if any(set(row) - {"id", "source_sha256", "text_runs", "format"} for row in edits):
         raise ValueError("edit package contains source/game fields")
+    if any(not re.fullmatch(r"MAX2_SCN/\d{3}\.SCN/text/\d{3}", row["id"]) or
+           not re.fullmatch(r"[0-9a-f]{64}", row["source_sha256"]) or
+           not isinstance(row["text_runs"], list) or not row["text_runs"] or
+           any(not isinstance(run, str) or not run for run in row["text_runs"]) or
+           row.get("format", "paginated") != "paginated" for row in edits):
+        raise ValueError("unexpected beta edit record shape")
+    if any(re.search(r"[\u3041-\u3096\u30a1-\u30f6\u3400-\u9fff]", run)
+           for row in edits for run in row["text_runs"]):
+        raise ValueError("Japanese source text found in public edit set")
     package_dir.mkdir(parents=True)
     try:
         for name, source in SOURCES.items():

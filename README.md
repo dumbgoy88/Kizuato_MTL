@@ -21,6 +21,10 @@ The installer rejects modified or unsupported HDIs and will not overwrite an exi
 
 A v7 installer candidate now rebuilds the English scenes with lossless compression and splits large main-story scenes to address a memory error found in v6. Targeted emulator checks reached two added scene transitions and both paths of one choice. Full-route testing is still underway, so the **v6 ZIP above remains the published download**; the v7 candidate is not yet a release. The source tools and current test limits are in [STATUS.md](STATUS.md).
 
+## English script
+
+The [full English edit set](translations/english_edits.json) is available here as readable JSON, with stable message IDs and source hashes. It is the text used by the v7 candidate and contains no original Japanese script or game assets. [Format and coverage notes](translations/README.md) explain the remaining unchanged neutral messages.
+
 ## Report problems
 
 Please report missing or clipped text, choice or branch problems, effects, audio, and awkward translation with the route, nearby line, emulator version, and a screenshot. [Open an issue](https://github.com/dumbgoy88/Kizuato_MTL/issues). The full game has not been verified yet, and the original adult content is present.
