@@ -16,6 +16,10 @@ This beta adds an AI-assisted English script to Leaf's original PC-98 Kizuato. Y
 
 The installer rejects modified or unsupported HDIs and will not overwrite an existing output. It needs no extra Python packages or `mtools`.
 
+## Development update
+
+A v7 installer candidate now rebuilds the English scenes with lossless compression and splits large main-story scenes to address a memory error found in v6. Targeted emulator checks reached two added scene transitions and both paths of one choice. Full-route testing is still underway, so the **v6 ZIP above remains the published download**; the v7 candidate is not yet a release. The source tools and current test limits are in [STATUS.md](STATUS.md).
+
 ## Report problems
 
 Please report missing or clipped text, choice or branch problems, effects, audio, and awkward translation with the route, nearby line, emulator version, and a screenshot. [Open an issue](https://github.com/dumbgoy88/Kizuato_MTL/issues). The full game has not been verified yet, and the original adult content is present.

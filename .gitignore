@@ -11,6 +11,10 @@
 *.D88
 *.img
 *.IMG
+*.iso
+*.ISO
+*.hdm
+*.HDM
 /Play Kizuato.sh
 
 # Extracted or rebuilt copyrighted assets and emulator state
@@ -39,6 +43,14 @@
 *.FM
 *.fm
 *.MD
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.ogg
+*.flac
+*.mp3
 *.BAT
 *.bat
 
@@ -64,6 +76,10 @@
 !.env.example
 *credentials*
 *secrets*
+*.pem
+*.key
+*.p12
+*.pfx
 __pycache__/
 .pytest_cache/
 .venv/

@@ -1,0 +1,12 @@
+{
+  "route": "chizuru_good_tail_example",
+  "steps": [
+    {
+      "name": "advance after the verified final Chizuru choice",
+      "action": "advance_to_ending",
+      "ending_id": "chizuru_good",
+      "max_presses": 400,
+      "interval": 1.0
+    }
+  ]
+}

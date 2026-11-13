@@ -56,7 +56,7 @@ Compare only a few representative passages with a local model before expanding t
 
 The current local PLaMo opening run and its live stop/resume controls are in [docs/local_run.md](local_run.md). A conservative whole-corpus draft command is in [docs/whole_run.md](whole_run.md); it does not yet produce an insertion-ready patch.
 
-The first whole-script draft pass has finished. Its 3,306 translatable IDs are cached; formatting, pause alignment, typography, and route-aware editorial review remain. [docs/review_findings.md](review_findings.md) gives the static QA counts. [docs/beta_test.md](beta_test.md) identifies the current disposable player-test image and its limitations.
+The first whole-script draft pass has finished. Its 3,306 translatable IDs are cached; formatting, pause alignment, typography, and route-aware editorial review remain. [docs/review_findings.md](review_findings.md) gives the static QA counts. [docs/beta_test.md](beta_test.md) describes the earlier player-test image and its limitations; see the top of `STATUS.md` for the newer sharded candidate.
 
 A second local pass with verified mandatory cross-scene context, choice breadcrumbs, expanded names, and stage-gated PC-98 facts is prepared. Run `bash tools/full_run.sh route` to start or resume it; use `bash tools/full_run.sh stop` from another terminal to stop after the current request. [docs/route_aware_run.md](route_aware_run.md) gives preparation, live monitoring, and precise context limits. This pass has only been smoke-tested so far.
 
@@ -74,7 +74,13 @@ python tools/compare_local.py work/messages.jsonl examples/model_sample.json /pa
 
 The existing older llama.cpp executable does not understand this model's tokenizer. See [docs/models.md](models.md) for the tested local runtime. Sample outputs and cache stay in ignored `work/`. No GPT API backend is active; adding one would require separate explicit configuration and a deliberate run.
 
-The v6 beta installer ZIP is available on the GitHub release page. Do not publish extracted game files or a patched HDI.
+## Current sharded candidate
+
+Run `bash tools/rebuild_split_demo.sh <unused-name>` to rebuild the full English local test HDI from ignored source and draft files. It audits pagination, compresses rebuilt scenes with LZS2, splits main-story text blocks to at most 16,000 decoded bytes, and verifies the installed PAK on a new HDI copy. It never overwrites an existing output. Review `build/<name>-split-audit.json` and `build/<name>-shard-report.json`; bonus scene `201.SCN` remains an explicit exception.
+
+`python tools/build_beta_package.py` creates the ignored `build/Kizuato-English-v7-beta-candidate.zip` from the pinned edit set and checked PAK. The builder refuses to replace an existing ZIP. Its packaged `install.py` was run end to end on the pinned clean HDI; see `STATUS.md` for hashes and native checks. To verify another clean install, extract the ZIP and run its `install.py` with `--output` set to an unused path under `build/`.
+
+The public README still links the older v6 beta. Do not publish the v7 candidate, extracted game files, or a patched HDI until the outstanding route checks in `STATUS.md` are reviewed.
 
 ## Project layout
 

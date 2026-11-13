@@ -1,4 +1,4 @@
-Kizuato PC-98 English beta (v6)
+Kizuato PC-98 English beta candidate (v7)
 ================================
 
 This is a playtest build of Leaf's original PC-98 Kizuato. The installer
@@ -23,7 +23,7 @@ Install
    Windows:      py -3 install.py "C:\path\to\Kizuato (J).hdi"
 
    On Windows you can also drag the clean HDI onto Install beta.bat.
-4. A new "Kizuato (J)-English-v6-beta.hdi" appears next to your original.
+4. A new "Kizuato (J)-English-v7-beta.hdi" appears next to your original.
    The installer never overwrites either file. To choose another output:
 
    python3 install.py "/path/to/Kizuato (J).hdi" --output "/path/to/beta.hdi"
@@ -40,11 +40,13 @@ source hash above. Do not force it onto another release.
 Beta status and feedback
 ------------------------
 The English is a first-pass AI-assisted draft; spelling, voice, nuance, and
-route context still need review. The opening English has been seen in Neko
-Project II Kai and a player reported the pagination looked fixed. The entire
+route context still need review. The opening English and two sharded scenes
+have been seen in Neko Project II Kai. The entire
 game, both paths of every choice, effects timing, and save/load have not yet
 been verified. Static checks find all 47 choice groups within the measured
-24-column/12-row limit. Twelve unreferenced bonus-scene messages still need
+24-column/12-row limit. Main-story scenes over 16,000 decoded text bytes are
+split without losing messages in static reconstruction checks. Scene 201 is
+still an exception with twelve dynamically referenced bonus messages needing
 engine research. Adult scenes are present as in the original game.
 
 Please note the route and nearest choice when you spot a problem. A screenshot,

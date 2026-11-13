@@ -14,7 +14,7 @@ import re
 import struct
 from pathlib import Path
 
-from leafpack_pc98 import Archive, Entry, build_archive, decode_scene, read_archive
+from leafpack_pc98 import Archive, Entry, build_archive, compress_lzs2, decode_scene, read_archive
 
 COMMAND_LENGTHS = {
     # In 201.SCN/text/032, 0x26 occurs three times after a 0x3a command.
@@ -122,7 +122,7 @@ def replace_text_block(entry: Entry, new_text: bytes) -> bytes:
     text_at = event_at + len(event_block)
     if text_at % 16:
         raise ValueError("old event block alignment invalid")
-    new_block = struct.pack("<I", len(new_text)) + compress_literals(new_text)
+    new_block = struct.pack("<I", len(new_text)) + compress_lzs2(new_text)
     out = bytearray(raw[:text_at])
     struct.pack_into("<H", out, 4, text_at // 16)
     out += new_block

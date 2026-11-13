@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Package the v6 English edit instructions and installer, without game files."""
+"""Package the v7 English edit instructions and installer, without game files."""
 from __future__ import annotations
 
 import gzip
@@ -11,11 +11,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 BUILD = ROOT / "build"
-NAME = "Kizuato-English-v6-beta"
+NAME = "Kizuato-English-v7-beta-candidate"
 EDITS = BUILD / "all-english-diagnostic-20261111-v6-unsafe-intermediate-edits.json"
 EXPECTED_EDITS = "a1e846b6d25d4fc0d12ac2a5918a5d2451bd6d3b3269936be1ea2efb7d34a26b"
-FINAL_PAK = BUILD / "all-english-diagnostic-20261111-v6.PAK"
-EXPECTED_PAK = "b5a64890f9ffca8e7c02625696c866629d5e1f2b78c0540e7a86c3a1b4389249"
+FINAL_PAK = BUILD / "v7-sharded-builder-check.PAK"
+EXPECTED_PAK = "a9c35adf6e96d156405a937f7a0635a8bd8ba54075791792198170931cacc05b"
 SOURCES = {
     "install.py": ROOT / "tools/beta_install.py",
     "fat12_hdi.py": ROOT / "tools/fat12_hdi.py",
@@ -24,6 +24,8 @@ SOURCES = {
     "event_graph.py": ROOT / "tools/event_graph.py",
     "split_pages.py": ROOT / "tools/split_pages.py",
     "audit_split_pages.py": ROOT / "tools/audit_split_pages.py",
+    "shard_main_scenes.py": ROOT / "tools/shard_main_scenes.py",
+    "shard_linear_scene.py": ROOT / "tools/shard_linear_scene.py",
     "README.txt": ROOT / "docs/beta_installer_readme.txt",
 }
 
@@ -39,7 +41,7 @@ def main() -> None:
         raise ValueError("beta package exists; choose a new version before rebuilding")
     edit_bytes = EDITS.read_bytes()
     if digest(edit_bytes) != EXPECTED_EDITS or digest(FINAL_PAK.read_bytes()) != EXPECTED_PAK:
-        raise ValueError("v6 edit instructions or verified PAK changed")
+        raise ValueError("v7 edit instructions or verified PAK changed")
     edits = json.loads(edit_bytes)
     if len(edits) != 3264 or len({row["id"] for row in edits}) != 3264:
         raise ValueError("unexpected beta edit IDs")
@@ -53,7 +55,7 @@ def main() -> None:
         (package_dir / "Install beta.bat").write_bytes(
             b'@echo off\r\nif "%~1"=="" (\r\n  echo Drag a clean Kizuato HDI onto this file.\r\n  pause\r\n  exit /b 1\r\n)\r\npy -3 "%~dp0install.py" "%~1"\r\npause\r\n')
         files = sorted(p for p in package_dir.iterdir() if p.is_file())
-        manifest = {"version": "v6-beta", "source_hdi_sha256":
+        manifest = {"version": "v7-beta-candidate", "source_hdi_sha256":
                     "783adfa48bf5b8efcb9ae681e726f3c6180e8cac2d2bc568a5953aa32b992d04",
                     "patched_scene_pak_sha256": EXPECTED_PAK,
                     "files": {p.name: digest(p.read_bytes()) for p in files}}

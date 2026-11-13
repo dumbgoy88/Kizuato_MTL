@@ -15,8 +15,8 @@ from collections import Counter
 from pathlib import Path
 
 from event_graph import parse_scene
-from leafpack_pc98 import Archive, Entry, build_archive, decode_scene, read_archive
-from scenes import compress_literals, font_table, make_text_block, messages, segments
+from leafpack_pc98 import Archive, Entry, build_archive, compress_lzs2, decode_scene, read_archive
+from scenes import font_table, make_text_block, messages, segments
 
 ORIGINAL_SHA256 = "beec74329493a72fcdb61c914539d3d210f0193d714fdc583189aec1e9a5cace"
 
@@ -137,10 +137,10 @@ def replace_blocks(entry: Entry, event: bytes, text: bytes) -> Entry:
     original = entry.data
     event_at = struct.unpack_from("<H", original, 0)[0] * 16
     out = bytearray(original[:event_at])
-    out += struct.pack("<I", len(event)) + compress_literals(event)
+    out += struct.pack("<I", len(event)) + compress_lzs2(event)
     out += bytes((-len(out)) % 16)
     text_at = len(out)
-    out += struct.pack("<I", len(text)) + compress_literals(text)
+    out += struct.pack("<I", len(text)) + compress_lzs2(text)
     out += bytes((-len(out)) % 16)
     if text_at // 16 > 0xFFFF:
         raise ValueError(f"{entry.name}: scene block offset overflow")

@@ -1,0 +1,21 @@
+{
+  "revision": "v6-beta",
+  "original_scene_pak_sha256": "beec74329493a72fcdb61c914539d3d210f0193d714fdc583189aec1e9a5cace",
+  "edit_set_sha256": "a1e846b6d25d4fc0d12ac2a5918a5d2451bd6d3b3269936be1ea2efb7d34a26b",
+  "guide": "https://lastcharles.com/pc-18/walkthrough/pc-18/kizuato",
+  "endings": [
+    {"id":"chizuru_bad_1","route":"Chizuru","result":"bad 1","scene":"089.SCN","final_message":"MAX2_SCN/089.SCN/text/037","marker":"LAST IMAGE I SAW","post_presses":0},
+    {"id":"chizuru_bad_2","route":"Chizuru","result":"bad 2","scene":"087.SCN","final_message":"MAX2_SCN/087.SCN/text/018","marker":"WHEN WILL I WAKE UP NEXT","post_presses":0},
+    {"id":"chizuru_bad_3","route":"Chizuru","result":"bad 3","scene":"084.SCN","final_message":"MAX2_SCN/084.SCN/text/043","marker":"WARM AS THE MORNING SUNLIGHT","post_presses":0},
+    {"id":"chizuru_good","route":"Chizuru","result":"good","scene":"086.SCN","final_message":"MAX2_SCN/086.SCN/text/041","marker":"CHIZURU SAN AND I SHARED A LONG LONG KISS","post_presses":0},
+    {"id":"azusa_bad_1","route":"Azusa","result":"bad 1","scene":"108.SCN","final_message":"MAX2_SCN/108.SCN/text/049","marker":"I WAS THIRSTY","post_presses":0},
+    {"id":"azusa_bad_2","route":"Azusa","result":"bad 2","scene":"107.SCN","final_message":"MAX2_SCN/107.SCN/text/013","marker":"EVERYTHING WENT BLANK","post_presses":0},
+    {"id":"azusa_bad_3","route":"Azusa","result":"bad 3","scene":"106.SCN","final_message":"MAX2_SCN/106.SCN/text/012","marker":"AND THE DOOR OPENED","post_presses":0},
+    {"id":"azusa_good","route":"Azusa","result":"good","scene":"105.SCN","final_message":"MAX2_SCN/105.SCN/text/045","marker":"LINGERED IN MY EARS LONG","post_presses":1,"post_marker":"AFTER"},
+    {"id":"kaede_bad","route":"Kaede","result":"bad","scene":"130.SCN","final_message":"MAX2_SCN/130.SCN/text/019","marker":"SEE THAT GIRL ONCE MORE","post_presses":0},
+    {"id":"kaede_good","route":"Kaede","result":"good","scene":"129.SCN","final_message":"MAX2_SCN/129.SCN/text/039","marker":"AND I SHARED A LIGHT KISS","post_presses":0},
+    {"id":"yanagawa_end","route":"Yanagawa","result":"end","scene":"135.SCN","final_message":"MAX2_SCN/135.SCN/text/028","marker":"EMERGING FROM THE DARKNESS THAT FIGURE WAS","post_presses":0},
+    {"id":"hatsune_bad","route":"Hatsune","result":"bad","scene":"159.SCN","final_message":"MAX2_SCN/159.SCN/text/012","marker":"IT ARRIVED","post_presses":0},
+    {"id":"hatsune_good","route":"Hatsune","result":"good","scene":"158.SCN","final_message":"MAX2_SCN/158.SCN/text/054","marker":"POWER OF THE DEMONS","post_presses":0}
+  ]
+}

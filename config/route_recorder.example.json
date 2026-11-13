@@ -1,0 +1,9 @@
+{
+  "route": "opening_example",
+  "steps": [
+    {"name": "settle on title screen", "action": "wait", "seconds": 3},
+    {"name": "confirm title screen text", "action": "checkpoint", "expect": "START|NEW GAME"},
+    {"name": "start game", "action": "press", "key": "Return", "count": 1, "interval": 0.5},
+    {"name": "wait for next screen", "action": "wait", "seconds": 2}
+  ]
+}

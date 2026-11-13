@@ -1,0 +1,146 @@
+{
+  "route": "chizuru_good",
+  "source_guide": "https://lastcharles.com/pc-18/walkthrough/pc-18/kizuato",
+  "ending_id": "chizuru_good",
+  "confidence": "guide options matched exact PC-98 Japanese choice text; route reachability unverified",
+  "choices": [
+    {
+      "scene": "001.SCN",
+      "block": 1,
+      "option_count": 3,
+      "selected": 1
+    },
+    {
+      "scene": "005.SCN",
+      "block": 1,
+      "option_count": 2,
+      "selected": 1
+    },
+    {
+      "scene": "010.SCN",
+      "block": 1,
+      "option_count": 2,
+      "selected": 0
+    },
+    {
+      "scene": "013.SCN",
+      "block": 1,
+      "option_count": 2,
+      "selected": 0
+    },
+    {
+      "scene": "016.SCN",
+      "block": 1,
+      "option_count": 2,
+      "selected": 1
+    },
+    {
+      "scene": "019.SCN",
+      "block": 1,
+      "option_count": 2,
+      "selected": 1
+    },
+    {
+      "scene": "021.SCN",
+      "block": 1,
+      "option_count": 2,
+      "selected": 0
+    },
+    {
+      "scene": "024.SCN",
+      "block": 1,
+      "option_count": 2,
+      "selected": 1
+    },
+    {
+      "scene": "031.SCN",
+      "block": 1,
+      "option_count": 2,
+      "selected": 0
+    },
+    {
+      "scene": "034.SCN",
+      "block": 1,
+      "option_count": 2,
+      "selected": 0
+    },
+    {
+      "scene": "037.SCN",
+      "block": 1,
+      "option_count": 2,
+      "selected": 1
+    },
+    {
+      "scene": "040.SCN",
+      "block": 1,
+      "option_count": 3,
+      "selected": 1
+    },
+    {
+      "scene": "044.SCN",
+      "block": 1,
+      "option_count": 3,
+      "selected": 2
+    },
+    {
+      "scene": "050.SCN",
+      "block": 1,
+      "option_count": 2,
+      "selected": 0
+    },
+    {
+      "scene": "056.SCN",
+      "block": 1,
+      "option_count": 2,
+      "selected": 1
+    },
+    {
+      "scene": "059.SCN",
+      "block": 1,
+      "option_count": 2,
+      "selected": 0
+    },
+    {
+      "scene": "063.SCN",
+      "block": 1,
+      "option_count": 2,
+      "selected": 1
+    },
+    {
+      "scene": "066.SCN",
+      "block": 1,
+      "option_count": 3,
+      "selected": 1
+    },
+    {
+      "scene": "070.SCN",
+      "block": 1,
+      "option_count": 2,
+      "selected": 1
+    },
+    {
+      "scene": "073.SCN",
+      "block": 1,
+      "option_count": 2,
+      "selected": 0
+    },
+    {
+      "scene": "078.SCN",
+      "block": 1,
+      "option_count": 2,
+      "selected": 1
+    },
+    {
+      "scene": "082.SCN",
+      "block": 1,
+      "option_count": 2,
+      "selected": 1
+    },
+    {
+      "scene": "083.SCN",
+      "block": 1,
+      "option_count": 2,
+      "selected": 1
+    }
+  ]
+}

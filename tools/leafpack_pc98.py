@@ -12,6 +12,8 @@ import argparse
 import hashlib
 import re
 import struct
+from collections import deque
+from itertools import islice
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -139,6 +141,74 @@ def decompress_lzs2(data: bytes, output_size: int) -> tuple[bytes, int]:
                 ring_pos = (ring_pos + 1) & 0xFFF
                 copy_pos = (copy_pos + 1) & 0xFFF
     return bytes(result), source_pos
+
+
+def compress_lzs2(data: bytes) -> bytes:
+    """Greedy LZS2 encoder with a 4 KiB ring and 3–18 byte copy tokens.
+
+    Matches are limited to prior source positions, so every token can be
+    decoded by the game's existing overlapping-ring copy operation.
+    """
+    positions: dict[bytes, deque[int]] = {}
+    output = bytearray()
+    group: list[tuple[bool, int]] = []
+    size = len(data)
+
+    def remember(index: int) -> None:
+        if index + 3 > size:
+            return
+        key = data[index:index + 3]
+        bucket = positions.setdefault(key, deque())
+        bucket.append(index)
+        while bucket and bucket[0] < index - 4096:
+            bucket.popleft()
+
+    def flush() -> None:
+        flags = sum(1 << (7 - index) for index, (literal, _) in enumerate(group)
+                    if literal)
+        output.append((~flags) & 0xFF)
+        for literal, value in group:
+            if literal:
+                output.append((~value) & 0xFF)
+            else:
+                output.extend(((~value) & 0xFFFF).to_bytes(2, "little"))
+        group.clear()
+
+    index = 0
+    while index < size:
+        best_length = 0
+        best_position = 0
+        if index + 3 <= size:
+            bucket = positions.get(data[index:index + 3])
+            if bucket:
+                for source in islice(reversed(bucket), 48):
+                    if index - source > 4096:
+                        break
+                    length = 3
+                    limit = min(18, size - index)
+                    while length < limit and data[source + length] == data[index + length]:
+                        length += 1
+                    if length > best_length:
+                        best_length = length
+                        best_position = (0xFEE + source) & 0xFFF
+                        if length == 18:
+                            break
+        if best_length >= 3:
+            group.append((False, (best_position << 4) | (best_length - 3)))
+            consumed = best_length
+        else:
+            group.append((True, data[index]))
+            consumed = 1
+        for source in range(index, index + consumed):
+            remember(source)
+        index += consumed
+        if len(group) == 8:
+            flush()
+    if group:
+        flush()
+    if decompress_lzs2(bytes(output), size)[0] != data:
+        raise AssertionError("LZS2 encoder failed round trip")
+    return bytes(output)
 
 
 def decode_scene(entry: Entry) -> tuple[bytes, bytes]:

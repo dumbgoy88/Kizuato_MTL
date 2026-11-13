@@ -1,23 +1,20 @@
-# Status — public snapshot, 2026-11-11
+# Public status — 2026-11-12
 
-## User playtest note
+## Available release
 
-- GitHub README commit `47946bd` records the user's report that text fit and translation quality seemed good after roughly five minutes of play past the first choice. This is a user observation, not independent full-route verification.
-- The public source branch was rebased onto two remote README edits after a non-fast-forward push rejection. The README now gives installation instructions; this note preserves the user observation. No force push or remote write was performed.
+The published download linked from `README.md` is still **v6 beta**. A player reported that text fit and translation quality looked good after about five minutes of play past the first choice. That is a player observation, not a complete route test. The v6 archive later failed to load several large scenes in targeted emulator checks with a `*MES DATA` allocation error. Do not treat v6 as a verified full-game patch.
 
-## Verified
+## Verified v7 candidate work
 
-- The supplied PC-98 Kizuato scene archive extracts and rebuilds byte-identically when unchanged. The source HDI and scene PAK are SHA-256 pinned in the tools.
-- The v6 English edit set has 3,264 edited messages and no Japanese-letter fallbacks in its audited scene archive. Pagination uses real continuation messages and relocated event branches. The independent static audit reconstructed 2,566 split messages byte-for-byte and found all 47 choice groups within an estimated 24-column/12-row layout.
-- A separate beta installer ZIP contains English edit instructions and project-authored tools, not a game image or rebuilt archive. Its self-contained Python installer was tested on the exact clean source HDI; readback found only `KIZUATO/MAX2_SCN.PAK` changed among 45 installed files.
-- Neko Project II Kai displayed English opening narration on a v6 image with FM selected. A player reported the pagination looked fixed.
+- The local v7 build uses lossless LZS2 compression and splits 55 main-story source scenes into 66 additional numbered scenes. The resulting 239-scene PAK has SHA-256 `a9c35adf6e96d156405a937f7a0635a8bd8ba54075791792198170931cacc05b`. The sharder reconstructs every original source message and event command after reversing its ID remaps and removing only added handoffs. It rejects unsupported scene shapes, duplicated or unreferenced IDs, and branches into a split prefix.
+- The copied public sharder was run against the same ignored pre-shard input from the working project and reproduced that exact v7 PAK hash. No generated PAK was placed in or committed from the public checkout.
+- A fresh build completed the draft, layout, pagination, branch, sharding, and installed-file readback checks. The local v7 installer candidate ZIP has SHA-256 `d0ecb9613360d06a1ab9834b77aa8f2c41d2a7c5322c52830ffd024d52fe4ce2`. Running its packaged `install.py` against the hash-pinned clean HDI produced a new HDI with the expected scene PAK. The ZIP and HDI are ignored generated files and are not in Git.
+- SDL NP2 Kai displayed English text from sharded `016.SCN`, added `170.SCN`, and unsplit bonus `201.SCN`. Disposable, hash-checked shortcut probes verified the added `016 → 203` and `203 → 204` scene loads. A shortened `204.SCN` choice probe displayed both English options; option 1 reached `017.SCN` and option 2 reached `018.SCN`, each confirmed by the destination's opening text. FM was selected in these boots; playback and effects were not independently reviewed for the full route.
 
-## Current milestone and limitations
+## Limits and next checks
 
-The shareable v6 beta is ready for route-by-route player testing. A complete native playthrough, all choice paths, timing, effects, and save/load remain unverified. Twelve bonus-scene messages have no direct event reference and still need engine research. Static layout checks are evidence of capacity, not proof of native rendering.
+- The handoff and choice probes deliberately shorten preceding display calls. They verify engine commands and branch destinations in native play, but do not prove the unshortened scene chain or prior route state. No complete v7 route has been verified.
+- `201.SCN` loads in a direct jump but has twelve dynamically referenced bonus messages and page behavior that still need route-specific checks. It is an explicit exception to the 16,000-byte main-story text budget.
+- Next: test the unshortened route approach to the first sharded choice, audit the bonus-scene dynamic messages, then run guarded route and save/load checks with audio and effects observation. Publish a new installer only after reviewing those results. The source build commands are in `docs/development_workflow.md`; diagnostic method and limits are in `docs/test_strategy.md`.
 
-## Next steps
-
-1. Run each route with a reproducible input script and video; capture choice checkpoints and stop on mismatches.
-2. Review reported missing/clipped text, branch errors, timing, and translation quality by stable message ID.
-3. Rebuild and retest a new version from the hash-pinned source. Keep game images and beta payloads out of Git.
+No game images, rebuilt archives, model weights, screenshots, or private research notes are tracked here.
